@@ -67,7 +67,7 @@ const updateTask = async (req, res) => {
     }
 
     // Validate status if provided
-    const validStatuses = ["Pending", "in-progress", "completed"];
+    const validStatuses = ["pending", "in-progress", "Completed"];
     if (status && !validStatuses.includes(status)) {
       return res.status(400).json({ message: "Invalid status value" });
     }
